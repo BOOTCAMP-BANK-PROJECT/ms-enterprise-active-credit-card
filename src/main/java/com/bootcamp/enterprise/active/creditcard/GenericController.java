@@ -9,13 +9,13 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("api")
+@RequestMapping("enterprise/active/credit_card/test")
 @Tag(name = "CI/CD API Test", description = "CI/CD Test with Github Actions")
-@CrossOrigin( value = { "*" })
+@CrossOrigin( origins = {"*"})
 @RequiredArgsConstructor
 public class GenericController {
 
-    @GetMapping(value = "/test")
+    @GetMapping//(value = "/test")
     public Mono<ResponseEntity<Flux<String>>> getAll() {
         return Mono.just(
                 ResponseEntity.ok()
