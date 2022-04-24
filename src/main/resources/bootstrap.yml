@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: ms-enterprise-active-credit-card
+  cloud:
+    config:
+      label: main
+      uri: ${CONFIG_SERVER_URI:http://localhost:8081}
+      username: ${SECURITY_USERNAME:root}
+      password: ${SECURITY_PASSWORD:1234}
+
+# Swagger openapi.docs custom path
+springdoc:
+  api-docs:
+    path: enterprise/active/credit_card/docs
+    enabled: true
+  swagger-ui:
+    path: enterprise/active/credit_card/docs/ui
+    enabled: true
+  show-actuator: true
+
+# Tomcat Server Port
+server:
+  port: 3000

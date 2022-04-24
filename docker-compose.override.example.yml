@@ -1,0 +1,8 @@
+version: "3.8"
+
+services:
+  app:
+    environment:
+      CONFIG_SERVER_URI: "config_service_url: default localhost:8081"
+      SECURITY_USERNAME: "config_service_security_username"
+      SECURITY_PASSWORD: "config_service_security_password"
